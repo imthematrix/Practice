@@ -23,6 +23,10 @@ def pageCount(n, p):
     #while front <= p and p<back:
     #i was using equality here
     #that was wrong because edge case was not getting satisfied
+
+    #important point to note here is
+    #the beginning of the array was always 1 , an odd integer, but the end could be either odd or even
+    #so substracting the -1 from end would bring is closer to even cases
     while front < p and p<back:
         counter+=1
         front +=2
