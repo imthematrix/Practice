@@ -24,4 +24,4 @@ def beautifulDays(i, j, k):
             beautiful_days+=1
     return beautiful_days
 
-print(beautifulDays(10, 23, 2))
+print(beautifulDays(20, 23, 6))
