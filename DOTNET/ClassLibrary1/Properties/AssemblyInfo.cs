@@ -5,15 +5,16 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("IntroductionToCSharp")]
+[assembly: AssemblyTitle("ClassLibrary1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IntroductionToCSharp")]
+[assembly: AssemblyProduct("ClassLibrary1")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
+//[assembly: AssemblyCulture("My Culture")]
+//My Culture was an invalid Culture identifier so commented it out
 [assembly: AssemblyCulture("")]
-//Keep Blank if no culture
 
 // Setting ComVisible to false makes the types in this assembly not visible
 // to COM components.  If you need to access a type in this assembly from
@@ -21,7 +22,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1e8ee130-8499-4d3e-9575-54414f8ac98e")]
+[assembly: Guid("dbaf46c4-8891-46c2-b29a-72a26e911a9e")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -33,5 +34,6 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]// in .net versioin 4.7.2 it seems wildcard is not supported, it gives compilation error
+[assembly: AssemblyVersion("2.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyKeyFile(@"D:\GitHUB\Practice\DOTNET\ClassLibrary1\bin\Debug\newStrongNamedLeys.snk")]
