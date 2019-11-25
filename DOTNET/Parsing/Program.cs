@@ -42,7 +42,7 @@ namespace Parsing
 
 
             //int y = Convert.ToInt32(m);// convert.toInt32 converts from object type to int or any desired type
-            int y = int.Parse(m.ToString()); //parse tries to convert from string to desired datatype
+            //int y = int.Parse(m.ToString()); //parse tries to convert from string to desired datatype
             //this cause overflow exception as the integral part of float can't be contained in integer y
             //Console.WriteLine("float m = {0} converted to int y ={1}", m, y);
             //the above is somewhat good practice. But we can make it better
@@ -54,9 +54,9 @@ namespace Parsing
             
             bool converted = int.TryParse("1231231213123123123123123.5", out result);
             //tryparse tries to convert from string to desired datatype
+            //it returns boolean
+            //and a output parameterwhich contains the value of converted data if the data conversion is successfull.
             Console.WriteLine("Converted Value = {0}", converted ? result.ToString() : "Can't convert");
-
-
 
 
             Console.ReadKey();
