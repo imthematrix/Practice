@@ -31,7 +31,7 @@ namespace CoffeeeShop
         {
 
             int user_choice = 0, move_to_bill = 0;
-            int error_input = 0, next_round = 0;
+            int next_round = 0;
             int amt = 0;
             do
             {
@@ -78,7 +78,7 @@ namespace CoffeeeShop
                     default:
                         break;
                 }
-
+                // asking for another round
                 do
                 {
                     Console.WriteLine("Would you like another beverage?");
