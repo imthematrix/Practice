@@ -31,11 +31,11 @@ namespace CoffeeeShop
         {
 
             int user_choice = 0, move_to_bill = 0;
-            int error = 0, next_round = 0;
+            int error_input = 0, next_round = 0;
             int amt = 0;
             do
             {
-
+                next_round = 0;
                 
                 next_round = 0;
                 //displaying the menu
@@ -83,30 +83,22 @@ namespace CoffeeeShop
                 {
                     Console.WriteLine("Would you like another beverage?");
                     Console.WriteLine("Enter 1 for YES and 0 for NO");
-                    bool choice = int.TryParse(Console.ReadLine(), out error);
+                    bool choice = int.TryParse(Console.ReadLine(), out next_round);
                     if (choice)
                     {
-                        if (error == 1)
-                            next_round = 1;
-
-                        else if (error==0)
-
+                        if (next_round == 1 || next_round==0)
+                            break;
+                        
                         else
                         {
                             next_round = 0;
-                            error = 0;
                             Console.WriteLine("Please enter a 1 or 0 as response.");
                         }
-
                     }
                     else
-                    {
-                        error = 0;
-                        next_round = 0;
                         Console.WriteLine("Please enter a 1 or 0 as response.");
 
-                    }
-                } while (error==0);
+                } while (next_round==0);
 
             } while (next_round==1);
 
