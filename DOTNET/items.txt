@@ -5,9 +5,10 @@ C:\windows\microsoft.net\framework\v4.0.30319\installutil /i C:\FORDEV\UploadRef
 
 
 Personal Projects to work upon:
--> Path Finding Visualizer -> Angular and JS
--> Sorting Visualizer -> Angualar and JS
+-> Path Finding Visualizer -> react and Angular and JS
+-> Sorting Visualizer -> React and Angualar and JS
 -> A highly customizable application to do health check-Problem statement to be drawn
 -> Whatsapp Clone - messaging and video calling - React
 -> Customize existing healthcheck tools in .net core
 -> Start writing fun scripts in python and JS/JQ
+-> Using DOTNET Core, make an application to send sms to a user about a new application
