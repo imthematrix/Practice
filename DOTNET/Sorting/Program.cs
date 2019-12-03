@@ -23,11 +23,16 @@ namespace Sorting
             //this is how your menu driven program shold work.
 
             bool loop = false; //this variable tells whether to loop again or not
-            bool parsed =false; //this variable tells whether to conversion of user input to desired data type was successfull
-            int algo_choice; //this variable tells if the conversion was successfull, is the value supplied by user is permitted in program logic.
-           
+            bool parsed = false; //this variable tells whether to conversion of user input to desired data type was successfull
+            int algo_choice = -1; //this variable tells if the conversion was successfull, is the value supplied by user is permitted in program logic.
+            int endProgram = 0;
             do //bst for menu driven programs
             {
+                loop = false;
+                sorted = false;
+                parsed = false;
+                endProgram = 0;
+                algo_choice = -1;
                 Console.WriteLine();
 
                 Console.WriteLine("Press 1 for Bubble Sort");
@@ -36,18 +41,31 @@ namespace Sorting
                 parsed = int.TryParse(Console.ReadLine(), out algo_choice);
 
                 if (parsed)
-                    if (algo_choice >= 1 && algo_choice <= 9) {
-                        Console.WriteLine("Good Input! you have selected the algorithm number {0}", algo_choice);
-                        loop = false; }
+                {
+                    if (algo_choice >= 1 && algo_choice <= 9)
+                    {
+                        Console.WriteLine("\nGood Input! you have selected the algorithm number {0}", algo_choice);
+                        loop = false;
+                    }
+                    else if (algo_choice == 0)
+                    {
+                        Console.WriteLine("Exiting Application!");
+                        break;
+                        //loop = false;
+                        //endProgram = 1;
+                    }
                     else
                     {
                         Console.WriteLine("Bad Input! The Algorithm key {0} is not supported.", algo_choice);
                         loop = true;
                     }
+                }
                 else
                 {
                     Console.WriteLine("Invalid input! Please enter an integer value");
                     loop = true;
+                    continue;
+
                 }
                 /*
                  
@@ -55,15 +73,21 @@ namespace Sorting
              */
                 switch (algo_choice)
                 {
+                    case 0:
+                        Console.WriteLine("\nExiting Application!");
+                        result = new int[1];
+                        sorted = false;
+                        break;
                     case 1:
                         result = SortingAlgos.BubbleSort(a, out sorted);
-
-                        
+                        break;
+                    case 2:
+                        result = SortingAlgos.QuickSort(a, out sorted);
                         break;
                     default:
-                        result =new int[1];
+                        result = new int[1];
                         sorted = false;
-                        Console.WriteLine("The requested key {0} is not implemented yet", algo_choice);
+                        Console.WriteLine("\nThe requested key {0} is not implemented yet", algo_choice);
                         break;
                 }
                 if (sorted)
@@ -75,32 +99,45 @@ namespace Sorting
                     }
 
                     Console.WriteLine();
+                }
+                loop = false;
+                parsed = false;
 
-                    loop = false;
-                    parsed = false;
-                    int endProgram = 0;
-                    do
+                do
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Would you like to continue");
+                    Console.WriteLine("Press 1 if Yes");
+                    Console.WriteLine("Press 0 if No");
+                    parsed = int.TryParse(Console.ReadLine(), out endProgram);
+                    if (parsed)
                     {
-                        Console.WriteLine();
-                        Console.WriteLine("Would you like to continue");
-                        Console.WriteLine("Press 1 if No");
-                        Console.WriteLine("Press 0 if Yes");
-                        parsed = int.TryParse(Console.ReadLine(), out endProgram);
-                        if (parsed)
-                            if (endProgram == 1)
-                                loop = false;
-                            else
-                                loop = true;
+                        if (endProgram == 1)
+                        {
+                            loop = true;
+                            break;
+                        }
+                        else if (endProgram == 0)
+                        {
+                            Console.WriteLine("\nExiting Application!");
+                        }
                         else
                         {
-                            Console.WriteLine("Invalid Input! Please enter 1 for Yes and 0 for No");
-                            loop = true;
+                            Console.WriteLine("Option {0} is not available. Please enter 1 for Yes and 0 for No", endProgram);
                         }
-                    } while (loop);
-                }
-            } while(loop);
-            
-            //Console.ReadKey();
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid Input! Please enter 1 for Yes and 0 for No");
+                        endProgram = 1;
+                    }
+                } while (endProgram != 0);
+
+
+            } while (loop);
+
+            Console.ReadKey();
         }
     }
 }
