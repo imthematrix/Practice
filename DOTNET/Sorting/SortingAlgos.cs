@@ -10,6 +10,8 @@ namespace Sorting
     class SortingAlgos
     {
         //supply an array of length 20 with random variables
+        #region Helper methods
+
         public static int[] GetArray(int limit)
         {
             //int limit = 25;
@@ -21,13 +23,23 @@ namespace Sorting
             }
             return arr;
         }
+        static void PrintArray(int[] a)
+        {
+            foreach (int i in a)
+                Console.Write("{0} ", i);
+            Console.WriteLine();
+        }
+
         
         static void SwapElements(ref int a, ref int b)
         {
+            
             int temp = a;
             a = b;
             b = temp;
         }
+        #endregion
+        #region Bubble sort
         public static int[] BubbleSort(int[] a, out bool sorted)
         {
             Console.WriteLine("\nPerforming Bubble Sort\n");
@@ -51,43 +63,142 @@ namespace Sorting
             sorted = true;
             return a;
         }
-
+        #endregion 
+        #region quick sort 
         //actual implementation of quick sort
         static void QS(int[] x, int l, int h)
         {
             
-            if (l < h)
+            if (l < h)//at least two elements are required for quick sort
             {
+                //PrintArray(x);
                 int partition_element_index=Partition(x, l, h);
-
-                QS(x, l, partition_element_index);
+                //in the above call of Partition method, both l and h are inclusive and lie within array
+                //that's why when we call this next QS method recursively, we again supply low and high parameters inclusively
+                QS(x, l, partition_element_index-1);
+                
                 QS(x, partition_element_index + 1, h);
             }
         }
         //implementation of quick sort partition method
-        static int Partition(int[] x, int l, int h)
+        //case 1: Partitioning at first element
+        static int Partition(int[] x, int l, int h) //both l and h are inclusive
         {
+
             int pivot = x[l];
+            /*this implementation is for case where pivot is the first element*/
             int i = l;
-            int j = h;
+            int j = h + 1;
+            //why h+1?
+            // because we are using do while loop and j will first decrease then condition will be checked
+
             while (i < j)
             {
+
+
                 do
                 {
                     i++;
-                } while (x[i] <= pivot && i<=h);
+                } while (i < h + 1 && x[i] <= pivot);
+                //the index should be checked first because it is a do while loop and there is chance of index getting out of bound
+                //increment i until a item is found to be bigger than pivot
                 do
                 {
                     j--;
-                } while (x[j] > pivot);
+                } while (j > 0 && x[j] > pivot);
+                //the index should be checked first because it is a do while loop and there is chance of index getting out of bound
+                //decrement j until an element is found to be smaller than pivot
                 if (i < j)
                 {
                     SwapElements(ref x[i], ref x[j]);
                 }
+
             }
             SwapElements(ref x[l], ref x[j]);
             return j;
         }
+
+        //case 2: Partitioning at last element
+        //static int Partition(int[] x, int l, int h) //both l and h are inclusive
+        //{
+
+        //    int pivot = x[h];
+        //    /*this implementation is for case where pivot is the first element*/
+        //    int i = l-1;
+        //    int j = h;
+        //    //why l-1?
+        //    // because we are using do while loop and i will first increase then condition will be checked
+        //    //why not h+1
+        //    //because we are taking the last element as the pivot
+
+        //    while (i < j+1) //notice change here
+        //    {
+
+        //        do
+        //        {
+        //            i++;
+        //        } while (i < h + 1 && x[i] <= pivot);
+        //        //the index should be checked first because it is a do while loop and there is chance of index getting out of bound
+        //        //increment i until a item is found to be bigger than pivot
+
+        //        do
+        //        {
+        //            j--;
+        //        } while (j > 0 && x[j] > pivot);
+        //        //the index should be checked first because it is a do while loop and there is chance of index getting out of bound
+        //        //decrement j until an element is found to be smaller than pivot
+        //        if (i < j+1)
+        //        {
+        //            SwapElements(ref x[i], ref x[j]);
+        //            //PrintArray(x);
+        //        }
+
+        //    }
+
+        //    SwapElements(ref x[h], ref x[j+1]);
+        //    //PrintArray(x);
+        //    return j+1;
+        //}
+
+        //case 3: random element is pivot
+        //static int Partition(int[] x, int l, int h) //both l and h are inclusive
+        //{
+        //    Random r = new Random();
+        //    int pivot_index = r.Next() % x.Length;
+        //    int pivot = x[pivot_index];
+        //    /*this implementation is for case where pivot is the first element*/
+        //    int i = l-1;
+        //    int j = h + 1;
+        //    //why h+1?
+        //    // because we are using do while loop and j will first decrease then condition will be checked
+
+        //    while (i < j)
+        //    {
+
+
+        //        do
+        //        {
+        //            i++;
+        //        } while (i < h + 1 && x[i] <= pivot && i!=pivot_index);
+        //        //the index should be checked first because it is a do while loop and there is chance of index getting out of bound
+        //        //increment i until a item is found to be bigger than pivot
+        //        do
+        //        {
+        //            j--;
+        //        } while (j > 0 && x[j] > pivot && j!=pivot_index);
+        //        //the index should be checked first because it is a do while loop and there is chance of index getting out of bound
+        //        //decrement j until an element is found to be smaller than pivot
+        //        if (i < j)
+        //        {
+        //            SwapElements(ref x[i], ref x[j]);
+        //            PrintArray(x);
+        //        }
+
+        //    }
+        //    SwapElements(ref x[pivot_index], ref x[j]);
+        //    PrintArray(x);
+        //    return j;
+        //}
         public static int[] QuickSort(int[] a, out bool sorted)
         {
             
@@ -100,6 +211,7 @@ namespace Sorting
             sorted = true;
             return a;
         }
+        #endregion
 
     }
 }
