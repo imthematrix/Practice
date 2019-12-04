@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
@@ -10,7 +11,7 @@ namespace Sorting
     {
         static void Main()
         {
-
+            Stopwatch stopwatch;
             //int[] a = { 12, 23, 1, 4, 90, 23, 11, 22, 67, 93, 100, 24, 13, 12, 46, 16, 89, 13, 34, 29 };
             int[] a;
             int[] result;
@@ -80,6 +81,7 @@ namespace Sorting
                  
                 switch statement will come here
              */
+                stopwatch = Stopwatch.StartNew();//starting a stop watch
                 switch (algo_choice)
                 {
                     case 0://exit condition
@@ -104,15 +106,17 @@ namespace Sorting
                         Console.WriteLine("\nThe requested key {0} is not implemented yet", algo_choice);
                         break;
                 }
+                stopwatch.Stop(); //stopping the stopwatch
                 if (sorted) //if the sorting has not completed
                 {
+
                     Console.WriteLine("Below is the sorted Array");
                     foreach (int i in result)
                     {
                         Console.Write("{0} ", i);
                     }
 
-                    Console.WriteLine();
+                    Console.WriteLine("\nIt took a total of {0} ms or {1} ticks.", stopwatch.ElapsedMilliseconds, stopwatch.ElapsedTicks);
                 }
                 loop = false;
                 parsed = false;
@@ -151,7 +155,7 @@ namespace Sorting
 
             } while (loop);
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }

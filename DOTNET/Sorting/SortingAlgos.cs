@@ -33,18 +33,17 @@ namespace Sorting
             Console.WriteLine("\nPerforming Bubble Sort\n");
             /*
              * the basic idea behind bubble sort is that, the largest elment has to come out on the top after each iteration
-             * So, the first loop will go from 0 to n-1
-             *  meanwhile the internal loop goes from 0 to n-i-2, i.e. n-1 -i-1
-             *  this makes sure that the last element is in i and j gets the second last element
-             *  => n-1 last, n-2 second last
+             * So, the first loop will go from 0 to n-1-1
+             *  meanwhile the internal loop goes from 0 to n-1-1(to avoid exception), and it only checks the adjacent elements
+             *  comparison is done only in j and j+1 elements
              */
 
-            for(int i = 0; i<a.Length; i++)
+            for(int i = 0; i<a.Length-1; i++)//notice the limits
             {
-                for(int j =i+1; j<a.Length; j++)
+                for(int j =0; j<a.Length-1; j++)
                 {
-                    if (a[i] > a[j])
-                        SwapElements(ref a[i], ref a[j]);
+                    if (a[j] > a[j+1]) //only adjacent elements are compared
+                        SwapElements(ref a[j], ref a[j+1]);
                 }
             }
 
