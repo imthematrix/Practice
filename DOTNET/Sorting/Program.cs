@@ -25,7 +25,7 @@ namespace Sorting
             do //best for menu driven programs
             {
                 
-                a = SortingAlgos.GetArray(r.Next(10, 30));
+                a = SortingAlgos.GetArray(r.Next(10, 25));
                 bool sorted = false;
                 Console.WriteLine("Before applying the sort operation");
                 foreach (int i in a)
@@ -45,6 +45,8 @@ namespace Sorting
                 Console.WriteLine("Press 1 for Bubble Sort");
                 Console.WriteLine("Press 2 for Quick Sort");
                 Console.WriteLine("Press 3 for Insertion Sort");
+                Console.WriteLine("Press 4 for Selection Sort");
+
                 /*
                  enter more options here
                  */
@@ -98,6 +100,9 @@ namespace Sorting
                         break;
                     case 3:
                         result = SortingAlgos.InsertionSort(a, out sorted);
+                        break;
+                    case 4:
+                        result = SortingAlgos.SelectionSort(a, out sorted);
                         break;
                     /*
                  enter more options here    
