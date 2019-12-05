@@ -44,6 +44,7 @@ namespace Sorting
 
                 Console.WriteLine("Press 1 for Bubble Sort");
                 Console.WriteLine("Press 2 for Quick Sort");
+                Console.WriteLine("Press 3 for Insertion Sort");
                 /*
                  enter more options here
                  */
@@ -95,6 +96,9 @@ namespace Sorting
                     case 2:
                         result = SortingAlgos.QuickSort(a, out sorted);
                         break;
+                    case 3:
+                        result = SortingAlgos.InsertionSort(a, out sorted);
+                        break;
                     /*
                  enter more options here    
 
@@ -106,6 +110,7 @@ namespace Sorting
                         Console.WriteLine("\nThe requested key {0} is not implemented yet", algo_choice);
                         break;
                 }
+                Console.WriteLine();
                 stopwatch.Stop(); //stopping the stopwatch
                 if (sorted) //if the sorting has not completed
                 {

@@ -212,6 +212,28 @@ namespace Sorting
             return a;
         }
         #endregion
+        #region Insertion sort
+        public static int[] InsertionSort(int[] a, out bool sorted)
+        {
+
+            for(int i =1; i<a.Length; i++)
+            {
+                PrintArray(a);
+                int value = a[i];
+                int hole = i;
+
+                while (hole>0 && value < a[hole - 1])
+                {
+                    a[hole] = a[hole - 1];
+                    hole--;
+                }
+                a[hole] = value;
+
+            }
+            sorted = true;
+            return a;
+        }
+        #endregion
 
     }
 }
