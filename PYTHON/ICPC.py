@@ -2,8 +2,9 @@
 # def bitwise(x, y):
 #     return int(x)|int(y)
 def myBitwiseOR(x, y):
-    
-    return bin(int(x,2) | (int(y,2))).count("1")
+    # the below conversion is the best
+    # converts bit in string to int in constant time then does the bitwise or in the operand
+    return bin(int(x,2) | int(y,2)).count("1")
     # working
     # l= len(x)
     # p=list(map(bitwise, x, y))
