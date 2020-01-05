@@ -10,6 +10,7 @@ namespace Enums
     {
         static void Main(string[] args)
         {
+            
             Customer[] customers = new Customer[4];
             customers[0] = new Customer()
             {
@@ -22,8 +23,13 @@ namespace Enums
             {
                 Name = "Ramesh",
                 Gender = 1,
-                GenderWithEnum = Gender.Male
+                //GenderWithEnum = 123;//will through an error because enum is strongly typed
+
+                //the below is ok
+                //GenderWithEnum = Gender.Male
+                GenderWithEnum = (Gender)14//correct conversion of int to enum element but the value 14 does not have any element associated with it inside enum
             };
+        
             customers[2] = new Customer()
             {
                 Name = "Akila",
@@ -50,6 +56,30 @@ namespace Enums
             {
                 Console.WriteLine("Customer Name = {0}, and Gender = {1}", c.Name, GetGenderWithEnum(c.GenderWithEnum));
                
+            }
+
+
+            //Use and difference between Enum and enum keywords
+            // Enum is a class in sytem namespace, while enum keywprd help crate strongly typed
+            //contants and value types.
+            string[] EnumNames = Enum.GetNames(typeof(Gender));
+            //int[] EnumValues = (int[]) Enum.GetValues(typeof(Gender));
+
+            // Since we changed the type, we need to type cast again with short array
+            short[] EnumValues = (short[])Enum.GetValues(typeof(Gender));
+            // get all the string name of the enum
+            Console.WriteLine();
+
+            foreach (string name in EnumNames)
+            {
+                Console.WriteLine(name);
+            }
+            Console.WriteLine();
+
+            //get all the underlying type of the values of enum
+            foreach (int value in EnumValues)
+            {
+                Console.WriteLine(value);
             }
             Console.ReadKey();
         }
@@ -92,10 +122,15 @@ namespace Enums
     }
 
     //Let create an enum to resolve this problem
-    public enum Gender
+
+        //we can also change the underlying type of the enum.
+        // by default it is integer.
+        //Please note, the changed type should be intergral type only
+    public enum Gender: short
     {
         Unknown,
-        Male,
+        Male =11, // we can also assign some value into individual enum elements
+        //just make sure the abide by the underlying types' range.
         Female
     }
 
