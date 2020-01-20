@@ -14,7 +14,7 @@
     <RootNamespace>JavaScript_Part1</RootNamespace>
     <AssemblyName>JavaScript-Part1</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort>44327</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
@@ -68,8 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lesson1.aspx" />
+    <Content Include="Lesson10.aspx" />
     <Content Include="Lesson2.aspx" />
     <Content Include="Lesson3.aspx" />
+    <Content Include="Lesson4.aspx" />
+    <Content Include="Lesson5.aspx" />
+    <Content Include="Lesson6.aspx" />
+    <Content Include="lesson7.aspx" />
+    <Content Include="Lesson8.aspx" />
+    <Content Include="Lesson9.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -79,6 +86,13 @@
     </Compile>
     <Compile Include="Lesson1.aspx.designer.cs">
       <DependentUpon>Lesson1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson10.aspx.cs">
+      <DependentUpon>Lesson10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson10.aspx.designer.cs">
+      <DependentUpon>Lesson10.aspx</DependentUpon>
     </Compile>
     <Compile Include="Lesson2.aspx.cs">
       <DependentUpon>Lesson2.aspx</DependentUpon>
@@ -93,6 +107,48 @@
     </Compile>
     <Compile Include="Lesson3.aspx.designer.cs">
       <DependentUpon>Lesson3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson4.aspx.cs">
+      <DependentUpon>Lesson4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson4.aspx.designer.cs">
+      <DependentUpon>Lesson4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson5.aspx.cs">
+      <DependentUpon>Lesson5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson5.aspx.designer.cs">
+      <DependentUpon>Lesson5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson6.aspx.cs">
+      <DependentUpon>Lesson6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson6.aspx.designer.cs">
+      <DependentUpon>Lesson6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lesson7.aspx.cs">
+      <DependentUpon>lesson7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="lesson7.aspx.designer.cs">
+      <DependentUpon>lesson7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson8.aspx.cs">
+      <DependentUpon>Lesson8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson8.aspx.designer.cs">
+      <DependentUpon>Lesson8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson9.aspx.cs">
+      <DependentUpon>Lesson9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson9.aspx.designer.cs">
+      <DependentUpon>Lesson9.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -120,7 +176,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>54489</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44327/</IISUrl>
+          <IISUrl>http://localhost/JavaScript-Part1</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
