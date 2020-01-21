@@ -71,6 +71,10 @@
     <Content Include="Lesson10.aspx" />
     <Content Include="Lesson11.aspx" />
     <Content Include="Lesson12.aspx" />
+    <Content Include="Lesson13.aspx" />
+    <Content Include="Lesson14.aspx" />
+    <Content Include="Lesson15.aspx" />
+    <Content Include="Lesson16.aspx" />
     <Content Include="Lesson2.aspx" />
     <Content Include="Lesson3.aspx" />
     <Content Include="Lesson4.aspx" />
@@ -109,6 +113,34 @@
     </Compile>
     <Compile Include="Lesson12.aspx.designer.cs">
       <DependentUpon>Lesson12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson13.aspx.cs">
+      <DependentUpon>Lesson13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson13.aspx.designer.cs">
+      <DependentUpon>Lesson13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson14.aspx.cs">
+      <DependentUpon>Lesson14.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson14.aspx.designer.cs">
+      <DependentUpon>Lesson14.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson15.aspx.cs">
+      <DependentUpon>Lesson15.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson15.aspx.designer.cs">
+      <DependentUpon>Lesson15.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson16.aspx.cs">
+      <DependentUpon>Lesson16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson16.aspx.designer.cs">
+      <DependentUpon>Lesson16.aspx</DependentUpon>
     </Compile>
     <Compile Include="Lesson2.aspx.cs">
       <DependentUpon>Lesson2.aspx</DependentUpon>
