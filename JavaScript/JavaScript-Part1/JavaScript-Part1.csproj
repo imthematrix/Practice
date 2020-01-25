@@ -87,6 +87,7 @@
     <Content Include="Lesson20.aspx" />
     <Content Include="Lesson21.aspx" />
     <Content Include="Lesson22.aspx" />
+    <Content Include="Lesson23.aspx" />
     <Content Include="Lesson3.aspx" />
     <Content Include="Lesson4.aspx" />
     <Content Include="Lesson5.aspx" />
@@ -202,6 +203,13 @@
     </Compile>
     <Compile Include="Lesson22.aspx.designer.cs">
       <DependentUpon>Lesson22.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson23.aspx.cs">
+      <DependentUpon>Lesson23.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson23.aspx.designer.cs">
+      <DependentUpon>Lesson23.aspx</DependentUpon>
     </Compile>
     <Compile Include="Lesson3.aspx.cs">
       <DependentUpon>Lesson3.aspx</DependentUpon>
