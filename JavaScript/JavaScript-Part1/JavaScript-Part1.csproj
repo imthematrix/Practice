@@ -67,6 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\1.jpg" />
+    <Content Include="Images\2.jpg" />
+    <Content Include="Images\3.jpg" />
+    <Content Include="Images\4.jpg" />
+    <Content Include="Images\5.jpg" />
     <Content Include="Lesson1.aspx" />
     <Content Include="Lesson10.aspx" />
     <Content Include="Lesson11.aspx" />
@@ -80,6 +85,8 @@
     <Content Include="Lesson19.aspx" />
     <Content Include="Lesson2.aspx" />
     <Content Include="Lesson20.aspx" />
+    <Content Include="Lesson21.aspx" />
+    <Content Include="Lesson22.aspx" />
     <Content Include="Lesson3.aspx" />
     <Content Include="Lesson4.aspx" />
     <Content Include="Lesson5.aspx" />
@@ -87,6 +94,7 @@
     <Content Include="lesson7.aspx" />
     <Content Include="Lesson8.aspx" />
     <Content Include="Lesson9.aspx" />
+    <Content Include="SpecialJS\SlideShow.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +189,20 @@
     <Compile Include="Lesson20.aspx.designer.cs">
       <DependentUpon>Lesson20.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Lesson21.aspx.cs">
+      <DependentUpon>Lesson21.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson21.aspx.designer.cs">
+      <DependentUpon>Lesson21.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lesson22.aspx.cs">
+      <DependentUpon>Lesson22.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lesson22.aspx.designer.cs">
+      <DependentUpon>Lesson22.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Lesson3.aspx.cs">
       <DependentUpon>Lesson3.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -241,6 +263,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
