@@ -8,6 +8,7 @@
 </head>
 <body>
     <h3>Option 1</h3>
+    <p>Event handling using HTML attributes</p>
     <input type="button" id="btnExample"
         onmouseover="ChangeOnMouseOver(this)"
         onmouseout="ChangeOnMouseOut(this)"
@@ -16,6 +17,7 @@
     <br />
     <br />
     <h3>Option 2</h3>
+    <p>Event handling using DOM object properties</p>
     <table>
         <tr><td>First Name:</td>
             <td><input type="text" id="txtFirstName" 
@@ -44,6 +46,7 @@
   <br />
     <br />
     <h3>Option 3</h3>
+    <p>Event handling using special methods</p>
     <script type="text/javascript">
         /*
          * Event Handling in JS
@@ -126,6 +129,12 @@
         //we can also write the above one line as 
         window.document.getElementById("btn1").onclick = handler2;
         //clearly the handler assigned by the DOM object will prevail/overwrite.
+
+        /*
+         * Discussion on Option 3.
+         * Using special method for adding the event handlers
+         *  *
+         */
     </script>
 </body>
 </html>
