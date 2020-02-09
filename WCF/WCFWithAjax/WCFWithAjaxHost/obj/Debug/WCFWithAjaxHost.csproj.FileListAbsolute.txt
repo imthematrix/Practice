@@ -1,0 +1,9 @@
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\bin\Debug\WCFWithAjaxHost.exe.config
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\bin\Debug\WCFWithAjaxHost.exe
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\bin\Debug\WCFWithAjaxHost.pdb
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\bin\Debug\WCFWithAjax.dll
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\bin\Debug\WCFWithAjax.pdb
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\obj\Debug\WCFWithAjaxHost.csprojAssemblyReference.cache
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\obj\Debug\WCFWithAjaxHost.csproj.CopyComplete
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\obj\Debug\WCFWithAjaxHost.exe
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjaxHost\obj\Debug\WCFWithAjaxHost.pdb

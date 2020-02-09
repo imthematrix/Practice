@@ -27,7 +27,7 @@ namespace CalculatorWebApplication
              * Expand the Reference.svcmap
              * Click on Reference.cs
              * You will see on partial public class
-             * CalculatorWebServiceSoapClient*
+             * CalculatorWebServiceSoapClient
              */
             //make sure to check the Namespace of the webservice
             //partial / proxy class, you might need to import the namespace first.

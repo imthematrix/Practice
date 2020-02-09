@@ -1,0 +1,5 @@
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjax\bin\Debug\WCFWithAjax.dll
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjax\bin\Debug\WCFWithAjax.pdb
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjax\obj\Debug\WCFWithAjax.csprojAssemblyReference.cache
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjax\obj\Debug\WCFWithAjax.dll
+D:\GitHUB\Practice\WCF\WCFWithAjax\WCFWithAjax\obj\Debug\WCFWithAjax.pdb
