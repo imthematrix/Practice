@@ -11,7 +11,15 @@ namespace CalculatorWebApplication
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                CalculatorService.CalculatorWebServiceSoapClient client =
+                new CalculatorService.CalculatorWebServiceSoapClient();
+                GridView1.DataSource = client.GetCalculations();
+                GridView1.DataBind();
+                GridView1.HeaderRow.Cells[0].Text = "Recent Calculations: ";
 
+            }
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
@@ -37,6 +45,11 @@ namespace CalculatorWebApplication
             int result = client.Add(Convert.ToInt32(txtFirstNum.Text), Convert.ToInt32(txtSecondNum.Text));
             lblResult.Text = result.ToString();
 
+            //remember to change allowCookies attribute in bingings tag of web.config = true
+
+            GridView1.DataSource = client.GetCalculations();
+            GridView1.DataBind();
+            GridView1.HeaderRow.Cells[0].Text = "Recent Calculations: ";
         }
     }
 }

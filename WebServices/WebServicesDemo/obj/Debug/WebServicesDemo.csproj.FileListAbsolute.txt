@@ -52,7 +52,6 @@ D:\GitHUB\Practice\WebServices\WebServicesDemo\bin\roslyn\VBCSCompiler.exe
 D:\GitHUB\Practice\WebServices\WebServicesDemo\bin\roslyn\VBCSCompiler.exe.config
 D:\GitHUB\Practice\WebServices\WebServicesDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\GitHUB\Practice\WebServices\WebServicesDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\GitHUB\Practice\WebServices\WebServicesDemo\obj\Debug\WebServicesDemo.csprojAssemblyReference.cache
 D:\GitHUB\Practice\WebServices\WebServicesDemo\obj\Debug\WebServicesDemo.csproj.CopyComplete
 D:\GitHUB\Practice\WebServices\WebServicesDemo\obj\Debug\WebServicesDemo.dll
 D:\GitHUB\Practice\WebServices\WebServicesDemo\obj\Debug\WebServicesDemo.pdb

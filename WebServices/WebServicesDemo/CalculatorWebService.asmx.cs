@@ -10,7 +10,7 @@ namespace WebServicesDemo
     /// <summary>
     /// Summary description for CalculatorWebService
     /// </summary>
-    [WebService(Namespace = "http://tempuri.org/")]//this attribute says that class CalculatorWebService is web service.
+    [WebService(Namespace = "http://manishmicrotech.net/")]//this attribute says that class CalculatorWebService is web service.
     /*Namespace are used to uniquely identify from other
     webservices currently on the web. Ideally give organisation domain here.
     like, http://pragimtech.com/webservices/
@@ -29,12 +29,42 @@ namespace WebServicesDemo
      */
     {
 
-        [WebMethod]
+        [WebMethod(EnableSession =true, CacheDuration =30)] //if session is to be used.
         /*if you want to expose this method as part of this webservice , then we need to decorate the method
          with  [WebMethod] attribute. */
         public int Add(int firstNumber, int secondNumber) //the method should be public as well.
         {
-            return firstNumber+secondNumber;
+            int result = firstNumber + secondNumber;
+            List<string> pastCalculations;
+            if(Session["PastCalculations"] != null)
+            {
+                pastCalculations = (List<string>)Session["PastCalculations"];
+            }
+            else
+            {
+                pastCalculations = new List<string>();
+                //pastCalculations.Add("Recent Calculations: ");
+            }
+            pastCalculations.Add(firstNumber + " + " + secondNumber + " = " + result);
+            Session["PastCalculations"] = pastCalculations;
+            return result;
+        }
+
+        [WebMethod(enableSession:true)]
+        public List<string> GetCalculations()
+        {
+            List<string> pastCalculations;
+            if (Session["PastCalculations"] == null)
+            {
+                pastCalculations = new List<string>();
+                //pastCalculations.Add("Recent Calculations: ");
+                pastCalculations.Add("You have not performed any calculations.");
+            }
+            else
+            {
+                pastCalculations = (List<string>)Session["PastCalculations"];
+            }
+            return pastCalculations;
         }
     }
 }

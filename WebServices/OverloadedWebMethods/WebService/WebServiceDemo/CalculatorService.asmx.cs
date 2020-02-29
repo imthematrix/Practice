@@ -10,9 +10,11 @@ namespace WebServiceDemo
     /// Summary description for CalculatorService
     /// </summary>
     [WebService(Namespace = "http://aig.com/webservices/", Description = "This is webservice which will add number")]
+    
     //[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     //We need to use the wsiprofile as None when we have the overloaded, like below.
     [WebServiceBinding(ConformsTo = WsiProfiles.None)]
+    
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
     // [System.Web.Script.Services.ScriptService]
