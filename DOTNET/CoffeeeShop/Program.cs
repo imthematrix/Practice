@@ -37,7 +37,7 @@ namespace CoffeeeShop
             {
                 next_round = 0;
                 
-                next_round = 0;
+                
                 //displaying the menu
                 do
                 {

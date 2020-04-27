@@ -40,7 +40,7 @@ namespace OverrideEqualsMethod
             C3.FirstName = "Archana";
             C3.LastName = "Jasbir";
             Console.WriteLine("C1 == C3 => {0}", C1 == C3); //false
-            Console.WriteLine("C1.equals( C3 ) => {0}", C1.Equals(C3)); //false
+            Console.WriteLine("C1.equals( C3 ) => {0}", C1.Equals(C3)); //True
 
             Console.ReadKey();
         }

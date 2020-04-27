@@ -19,7 +19,7 @@ namespace OverrideToStringMethod
          */
         static void Main(string[] args)
         {
-            //int num = 10;
+            //int num = 10; 
             //Console.WriteLine(num.ToString()); //this is before we override the ToString Method
             Customer c1 = new Customer();
             c1.FirstName = "Manish";

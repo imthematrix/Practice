@@ -4,3 +4,4 @@ D:\GitHUB\Practice\WCF\Lesson3AddService\AddWCFService\bin\Debug\AddWCFService.p
 D:\GitHUB\Practice\WCF\Lesson3AddService\AddWCFService\obj\Debug\AddWCFService.csprojAssemblyReference.cache
 D:\GitHUB\Practice\WCF\Lesson3AddService\AddWCFService\obj\Debug\AddWCFService.dll
 D:\GitHUB\Practice\WCF\Lesson3AddService\AddWCFService\obj\Debug\AddWCFService.pdb
+D:\GitHUB\Practice\WCF\Lesson3AddService\AddWCFService\obj\Debug\AddWCFService.csproj.CoreCompileInputs.cache

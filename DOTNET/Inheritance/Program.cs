@@ -21,7 +21,7 @@ namespace Inheritance
         public string lname;
         public virtual void FullName()
         {
-            Console.WriteLine("{0} {1}", fname, lname);
+            Console.WriteLine("{0} {1} - Base class.", fname, lname);
         }
 
     }
@@ -59,7 +59,15 @@ namespace Inheritance
         //    base.FullName();
         //}
 
-        //the below will amek sure only the latest impementation of the FullName method will be opted, even when calling from the base class.
+        //the below will make sure only the latest impementation of the FullName method will be opted, even when calling from the base class.
+
+        /*
+         A method signature is a unique identification of a method for the C# compiler. 
+         The signature consists of a method name and the type and kind (value, reference, 
+         or output) of each of its formal parameters. Method signature does not include the
+         return type.
+
+         */
         public override void FullName()
         {
             Console.WriteLine("{0} {1} - Contractor", fname, lname);

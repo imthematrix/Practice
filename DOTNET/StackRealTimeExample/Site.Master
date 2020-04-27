@@ -10,7 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <table style="border: 1px solid black; width: 500 px; font-family: Arial">
+        <table style="border: 1px solid black; width: 500px; font-family: Arial">
             <tr>
                 <td colspan="2">
                     <asp:Label ID="lblMessage" runat="server" ForeColor="Red"></asp:Label>

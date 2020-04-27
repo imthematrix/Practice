@@ -8,3 +8,4 @@ D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHost\obj\Debug\CompanySer
 D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHost\obj\Debug\CompanyServiceHost.csproj.CopyComplete
 D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHost\obj\Debug\CompanyServiceHost.exe
 D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHost\obj\Debug\CompanyServiceHost.pdb
+D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHost\obj\Debug\CompanyServiceHost.csproj.CoreCompileInputs.cache

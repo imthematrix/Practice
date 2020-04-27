@@ -56,3 +56,4 @@ D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHttpPublic\obj\Debug\Comp
 D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHttpPublic\obj\Debug\CompanyServiceHttpPublic.csproj.CopyComplete
 D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHttpPublic\obj\Debug\CompanyServiceHttpPublic.dll
 D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHttpPublic\obj\Debug\CompanyServiceHttpPublic.pdb
+D:\GitHUB\Practice\WCF\Lesson3AddService\CompanyServiceHttpPublic\obj\Debug\CompanyServiceHttpPublic.csproj.CoreCompileInputs.cache
