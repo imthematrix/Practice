@@ -58,3 +58,4 @@ D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceClient\ob
 D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceClient\obj\Debug\TeacherServiceClient.pdb
 D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceClient\bin\TeacherObject.dll
 D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceClient\bin\TeacherObject.pdb
+D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceClient\obj\Debug\TeacherServiceClient.csproj.CoreCompileInputs.cache

@@ -9,145 +9,23 @@
 //------------------------------------------------------------------------------
 
 namespace ServiceReference1 {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EmployeeType", Namespace="http://schemas.datacontract.org/2004/07/TeacherObject")]
-    public enum EmployeeType : int {
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        NotProvided = -1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        FullTimeTeacher = 1,
-        
-        [System.Runtime.Serialization.EnumMemberAttribute()]
-        PartTimeTeacher = 2,
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartTimeTeacher", Namespace="http://schemas.datacontract.org/2004/07/TeacherObject")]
-    [System.SerializableAttribute()]
-    public partial class PartTimeTeacher : TeacherObject.TeacherItem, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int HourlyPayField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int HoursWorkedField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int HourlyPay {
-            get {
-                return this.HourlyPayField;
-            }
-            set {
-                if ((this.HourlyPayField.Equals(value) != true)) {
-                    this.HourlyPayField = value;
-                    this.RaisePropertyChanged("HourlyPay");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int HoursWorked {
-            get {
-                return this.HoursWorkedField;
-            }
-            set {
-                if ((this.HoursWorkedField.Equals(value) != true)) {
-                    this.HoursWorkedField = value;
-                    this.RaisePropertyChanged("HoursWorked");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FullTimeTeacher", Namespace="http://schemas.datacontract.org/2004/07/TeacherObject")]
-    [System.SerializableAttribute()]
-    public partial class FullTimeTeacher : TeacherObject.TeacherItem, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AnnualPackageField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AnnualPackage {
-            get {
-                return this.AnnualPackageField;
-            }
-            set {
-                if ((this.AnnualPackageField.Equals(value) != true)) {
-                    this.AnnualPackageField = value;
-                    this.RaisePropertyChanged("AnnualPackage");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.ITeacherService")]
     public interface ITeacherService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/InsertNewEmployee", ReplyAction="http://tempuri.org/ITeacherService/InsertNewEmployeeResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceReference1.PartTimeTeacher))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceReference1.FullTimeTeacher))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TeacherObject.PartTimeTeacher))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TeacherObject.FullTimeTeacher))]
         int InsertNewEmployee(TeacherObject.TeacherItem teacher);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/InsertNewEmployee", ReplyAction="http://tempuri.org/ITeacherService/InsertNewEmployeeResponse")]
         System.Threading.Tasks.Task<int> InsertNewEmployeeAsync(TeacherObject.TeacherItem teacher);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/ShowTeacherByID", ReplyAction="http://tempuri.org/ITeacherService/ShowTeacherByIDResponse")]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceReference1.PartTimeTeacher))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(ServiceReference1.FullTimeTeacher))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TeacherObject.PartTimeTeacher))]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(TeacherObject.FullTimeTeacher))]
         TeacherObject.TeacherItem ShowTeacherByID(int ID);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/ShowTeacherByID", ReplyAction="http://tempuri.org/ITeacherService/ShowTeacherByIDResponse")]

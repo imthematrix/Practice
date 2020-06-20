@@ -9,3 +9,4 @@ D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceHost\obj\
 D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceHost\obj\Debug\TeacherServiceHost.pdb
 D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceHost\bin\Debug\TeacherObject.dll
 D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceHost\bin\Debug\TeacherObject.pdb
+D:\GitHUB\Practice\WCF\Lesson4WCFDataContractsAndMembers\TeacherServiceHost\obj\Debug\TeacherServiceHost.csproj.CoreCompileInputs.cache

@@ -16,10 +16,12 @@ namespace TeacherObject
      */
 
     [DataContract(Namespace = "https://manish.kumar.net/TeacherItem/03/01/2020")]
-    [KnownType(typeof(PartTimeTeacher))]
-    [KnownType(typeof(FullTimeTeacher))] 
+    //[KnownType(typeof(PartTimeTeacher))]
+    //[KnownType(typeof(FullTimeTeacher))] 
     //the above known types can be added in web.config(which will be global too, just like using known types.)
     //or the serviceknown type attribute (which will be local only)
+    //check the aap.config file for the way we do specify the knowntype in declaratively
+
     public class TeacherItem
     {
         [DataMember(Order = 1)]
