@@ -14,7 +14,10 @@ SELECT `film`.`film_id`,
     `film`.`special_features`,
     `film`.`last_update`
 FROM `sakila`.`film`
-where `film`.`rating` like 'PG%';
+where `film`.`rating` like 'PG%'
+
+
+    
 
 
 
