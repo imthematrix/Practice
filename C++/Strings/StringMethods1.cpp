@@ -10,7 +10,7 @@ int main()
 
     cout<<"strstr(s1, s2): "<<strstr(s1, s2)<<endl;
     cout<<"strstr(s2, s3): "<<((strstr( s2, s3)!=NULL)?(strstr(s2, s3)):"Not found")<<endl;
-
+    cout<<"This is the end."<<endl;
 
     return 0;
 }
