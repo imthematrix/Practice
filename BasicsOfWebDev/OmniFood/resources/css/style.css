@@ -1,0 +1,163 @@
+/*
+Orange: #e67e22
+
+*/
+
+/*-----------------------------------------------------
+BASIC SETUP
+-----------------------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} /*i will do this in every project*/
+
+html {
+  background-color: #fff; /*default I want white*/
+  color: #555; /*default i want is grey*/
+  font-family: "Lato", "Arial", sans-serif; /*Load LATO; if no internet load  Arial, if arial not present in user machine, load any san serif font*/
+  font-size: 20px; /*default*/
+  font-weight: 300; /*default*/
+  text-rendering: optimizeLegibility;
+}
+
+/*-----------------------------------------------------
+NON REUSABLE ELEMENTS
+-----------------------------------------------------*/
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+    url(img/header-background.jpg); /*the image which will me the header background*/
+  /*use gradient on top of the header background.
+  this will srve two purpose: 1. darken the background image, 2. when you lighten the fonts written on top of the image, it will have nice contrast.*/
+  /*the last argument in rgba() is transparency, it goes from top to bottom*/
+
+  height: 100vh; /*make the image 100% of the viewport*/
+  background-size: cover; /*it was highly zoomed in previously by default*/
+  background-position: center; /*centered the background image*/
+}
+h1 {
+  margin: 0 0 20px 0; /*there was a margin in h1 element because of normalize.css file. we removed it here.*/
+  color: #fff; /*lighten the color*/
+  font-size: 240%; /*200% of what you have defined in the html (global) element*/
+  font-weight: 300; /*when the font size is big, font weight should be less*/
+  text-transform: uppercase; /*transform the text to uppercase*/
+  letter-spacing: 1px;
+  word-spacing: 4px;
+}
+
+.text-over-header {
+  position: absolute;
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  margin-top: 50px;
+  float: left;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 50px;
+  list-style: none;
+}
+
+.main-nav li {
+  display: inline-block;
+  padding: 5px 20px 10px 20px;
+  /* border-bottom: #e67e22 2px solid; */ /*because the space between two border is less
+  so I have decided to give border in the internal element i.e. <a></a>*/
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  text-decoration: none;
+  font-size: 90%;
+  padding: 8px 5px 8px 5px;
+  /* padding: 8px 5px is also ok */
+  text-transform: uppercase;
+  color: #fff;
+  border-bottom: #e67e22 2px solid transparent; /*when link and visited the bottom border should be transparent to show the transition properly*/
+  border-radius: 10px;
+  transition: border-bottom 0.3s;
+}
+
+.main-nav li a:active,
+.main-nav li a:hover {
+  border-bottom: #e67e22 2px solid;
+}
+
+/*-----------------------------------------------------
+REUSABLE ELEMENTS
+-----------------------------------------------------*/
+
+.row {
+  width: 1140px; /*this is the only value which will be absolute value in pixel and the rest of the values will be in percentages*/
+
+  margin: 0 auto 0 auto; /*centering the main div*/
+  /*margin: 0 auto; also works*/
+}
+
+.button:visited,
+.button:link {
+  /*common button using pseudo classess*/
+  /* design a button class, and using the design create two child button classes (ghost-button, full-button) to inherit this button class*/
+
+  /*
+  link: before any action from user
+  visited: visited by user
+  hover: hover over the element
+  active: performing action
+  */
+  display: inline-block;
+  /*
+  display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
+  Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
+
+  This inline-block allows us to do the below 
+  */
+  padding: 10px 30px 10px 30px;
+
+  /*padding: 10px 30px;this is also fine*/
+  text-decoration: none;
+  font-weight: 300;
+  border-radius: 200px;
+
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  /*defining the time delay in transition for three properties*/
+}
+
+.button-full:link,
+.button-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 20px;
+}
+.button-ghost:visited,
+.button-ghost:link {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.button:active,
+.button:hover {
+  background-color: #de7519; /*got this darker shade from the 0to255.com*/
+  border: 1px solid #de7519;
+}
+/* .button-full:active,
+.button-full:hover {
+  
+  border: 1px solid #de7519; as this was common in both the child classes so, i moved it to parent class button
+} */
+
+.button-ghost:active,
+.button-ghost:hover {
+  color: #fff;
+}
