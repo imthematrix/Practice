@@ -37,14 +37,46 @@ header {
   background-size: cover; /*it was highly zoomed in previously by default*/
   background-position: center; /*centered the background image*/
 }
+
+h1,
+h2,
+h3 {
+  font-weight: 300; /*when the font size is big, font weight should be less*/
+  text-transform: uppercase; /*transform the text to uppercase*/
+}
+
 h1 {
   margin: 0 0 20px 0; /*there was a margin in h1 element because of normalize.css file. we removed it here.*/
   color: #fff; /*lighten the color*/
   font-size: 240%; /*200% of what you have defined in the html (global) element*/
-  font-weight: 300; /*when the font size is big, font weight should be less*/
-  text-transform: uppercase; /*transform the text to uppercase*/
-  letter-spacing: 1px;
   word-spacing: 4px;
+  letter-spacing: 1px;
+}
+
+h2 {
+  /* margin-top: 40px; */
+  text-align: center;
+  font-size: 180%;
+  word-spacing: 3px;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+h2::after {
+  /*after psuedo class: the style appears just after the h2 element*/
+  display: block;
+  background-color: #e67e22;
+  content: ""; /*mandatory for using after psuedo class*/
+  margin: 30px auto 0 auto; /*top right bottom left*/
+  height: 2px;
+  width: 200px;
+}
+h3 {
+  font-size: 110%;
+  margin-bottom: 20px;
+}
+
+section {
+  padding: 80px 0 80px 0;
 }
 
 .text-over-header {
@@ -96,6 +128,31 @@ h1 {
 /*-----------------------------------------------------
 REUSABLE ELEMENTS
 -----------------------------------------------------*/
+
+.long-copyright {
+  line-height: 145%; /*use this value only*/
+  width: 60%;
+  margin-left: 20%;
+  margin-bottom: 20px;
+}
+.section-features .long-copyright {
+  margin-bottom: 30px;
+}
+
+/*----icons, paragraph inside the box in columns----*/
+.box {
+  padding: 0 1% 0 1%;
+}
+.box ion-icon {
+  color: #e67e22;
+  font-size: 350%;
+  display: block;
+  margin: 0 30% 30px 20%;
+}
+.box p {
+  line-height: 145%;
+  font-size: 90%;
+}
 
 .row {
   width: 1140px; /*this is the only value which will be absolute value in pixel and the rest of the values will be in percentages*/
@@ -160,4 +217,43 @@ REUSABLE ELEMENTS
 .button-ghost:active,
 .button-ghost:hover {
   color: #fff;
+}
+
+/********************sectios-meals****************/
+.section-meals {
+  padding: 0;
+}
+.meal-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meal-showcase li {
+  display: block;
+  float: left;
+  width: 25%; /*4*25% = 100%*/
+}
+.meal-showcase li figure {
+  width: 100%;
+  margin: 0;
+  overflow: hidden; /* we are doing this because figure is the container of img and putting overflow as hidden it gives a effect like image has zoomed but it space is not increased. it kind of fancy. check the browser */
+
+  /*figure is a container for img tag. if you look below, i want to darken the background of the image for styling.
+  So I'm going to set the background color of this figure element to something dark, then use opacity as 70% to get the desired effect
+  */
+  background-color: black;
+}
+.meal-showcase li img {
+  opacity: 0.7;
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.meal-showcase li img:hover {
+  width: 100%;
+  opacity: 1;
+  height: auto;
+  transform: scale(1.03);
 }
