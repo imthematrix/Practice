@@ -163,6 +163,7 @@ REUSABLE ELEMENTS
 /*----icons, paragraph inside the box in columns----*/
 .box {
   padding: 0 1% 0 1%;
+  
 }
 .box .feature-icon {
   color: #e67e22;
@@ -487,6 +488,11 @@ blockquote::before {
   width: 80%;
   height: auto;
   margin: 0 auto 0 auto;
+  border: 1px #fcfcfc solid;
+  background-color: #fcfcfc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 15px 15px 15px #e4e4e4;
 }
 
 input[type="text"],
@@ -495,7 +501,7 @@ select,
 textarea {
   padding: 10px;
   border-radius: 5px;
-  width: 80%;
+  width: 60%;
   border: #ccc 1px solid;
 }
 textarea {
