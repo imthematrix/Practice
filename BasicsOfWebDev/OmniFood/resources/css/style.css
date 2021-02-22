@@ -39,7 +39,7 @@ NON REUSABLE ELEMENTS
 header {
   background-attachment: fixed; /*the background image will be fixed as we scroll down*/
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url(img/header-background.jpg); /*the image which will me the header background*/
+    url(img/header-background-min.jpg); /*the image which will me the header background*/
   /*use gradient on top of the header background.
   this will srve two purpose: 1. darken the background image, 2. when you lighten the fonts written on top of the image, it will have nice contrast.*/
   /*the last argument in rgba() is transparency, it goes from top to bottom*/
@@ -392,6 +392,11 @@ input[type="submit"]:active {
 
 .app-screen {
   width: 45%;
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
 }
 
 /*work steps*/
@@ -483,7 +488,7 @@ input[type="submit"]:active {
 
 .section-testimnials {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(img/back-customers.jpg);
+    url(img/back-customers-min.jpg);
   background-size: cover;
   color: #fff;
   background-attachment: fixed;
