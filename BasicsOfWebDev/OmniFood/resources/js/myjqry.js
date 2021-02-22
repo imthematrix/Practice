@@ -70,4 +70,47 @@ $(document).ready(function(){
   });
 
 
+  //animation on scroll
+  //get class name of the animation from https://animate.style/
+
+  //1
+  $('.js--animation-on-scroll-1').waypoint(function(direction){
+    $('.js--animation-on-scroll-1').addClass('animate__animated animate__fadeIn');
+  },{offset:'50%'});
+
+  //2
+  $('.js--animation-on-scroll-2').waypoint(function(direction){
+    $('.js--animation-on-scroll-2').addClass('animate__animated animate__fadeInUp');
+  },{offset:'50%'});
+
+  //3
+  $('.js--animation-on-scroll-3').waypoint(function(direction){
+    $('.js--animation-on-scroll-3').addClass('animate__animated animate__fadeIn');
+  },{offset:'50%'});
+
+  //4
+  $('.js--animation-on-scroll-4').waypoint(function(direction){
+    $('.js--animation-on-scroll-4').addClass('animate__animated animate__pulse');
+  },{offset:'50%'});
+
+  // mobile navigation
+  $('.js--mobile-nav').click(function(){
+    var nav=$('.js--main-nav');
+    nav.slideToggle(300);
+    var opennav=$('ion-icon[name ="menu"]');
+    var closenav=$('ion-icon[name ="close"]');
+    
+    if(opennav.hasClass('open')){
+      opennav.removeClass('open');
+      opennav.addClass('close');
+      closenav.addClass('open');
+    }
+    else{
+      closenav.addClass('close');
+      closenav.removeClass('open');
+      opennav.addClass('open');
+    }
+  });
+  
+
 });

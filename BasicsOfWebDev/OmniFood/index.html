@@ -5,12 +5,12 @@
     <!--the above line will tell browsers not to zoom into the page-->
     <link type="text/css" rel="stylesheet" href="vendors/css/normalize.css" />
     <link href="vendors/css/grid.css" rel="stylesheet" type="text/css" />
-    <!-- <link
-      href="vendors/css/ionicons.min.css"
+    <link
       rel="stylesheet"
-      type="text/css"
-    /> -->
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
+    <!--ionicons-->
     <link type="text/css" rel="stylesheet" href="resources/css/style.css" />
     <link type="text/css" rel="stylesheet" href="resources/css/queries.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -22,9 +22,6 @@
     <title>OmniFood by Manish!</title>
   </head>
   <body>
-    <!-- <div class="row">
-      <h1>OmniFood by Manish!</h1>
-    </div> -->
     <header>
       <nav>
         <div class="row">
@@ -39,7 +36,7 @@
             class="logo-black"
           />
 
-          <ul class="main-nav">
+          <ul class="main-nav js--main-nav">
             <li><a href="#features">Food delivery</a></li>
             <li><a href="#work">How it works?</a></li>
             <li><a href="#cities">Our cities</a></li>
@@ -47,6 +44,10 @@
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#plans">Sign Up</a></li>
           </ul>
+          <div class="mobile-nav js--mobile-nav">
+            <ion-icon name="menu" class="mobile-nav-icon open"></ion-icon>
+            <ion-icon name="close" class="mobile-nav-icon close"></ion-icon>
+          </div>
         </div>
       </nav>
       <div class="text-over-header">
@@ -69,7 +70,7 @@
           we’re really good at it, we promise!
         </p>
       </div>
-      <div class="row">
+      <div class="row js--animation-on-scroll-1">
         <div class="col span-1-of-4 box">
           <!--See how we are first applying the col class then span-1-of-4 class-->
           <ion-icon name="calendar" class="feature-icon"></ion-icon>
@@ -184,7 +185,7 @@
         <h2>How it works &mdash; Simple as 1, 2, 3</h2>
       </div>
       <div class="row steps-box">
-        <div class="col span-1-of-2 phone-pic">
+        <div class="col span-1-of-2 phone-pic js--animation-on-scroll-2">
           <img
             src="resources/img/app-iPhone.png"
             alt="App screen on Iphone"
@@ -232,7 +233,7 @@
       <div class="row">
         <h2>We're currently in these cities</h2>
       </div>
-      <div class="row">
+      <div class="row js--animation-on-scroll-3">
         <div class="col span-1-of-4 box">
           <div class="city-img">
             <figure>
@@ -374,7 +375,7 @@
       </div>
       <div class="row">
         <div class="col span-1-of-3 box">
-          <div class="plan-box">
+          <div class="plan-box js--animation-on-scroll-4">
             <div class="plan-price">
               <h3>Premium</h3>
               <div class="plan-per-month">$399 <span>per month</span></div>

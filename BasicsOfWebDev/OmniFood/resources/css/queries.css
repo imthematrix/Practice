@@ -84,6 +84,7 @@ Last satisfied css design will be seen in the screen
   }
   .main-nav {
     margin-right: 1%;
+    
   }
   .main-nav li {
     padding: 3px 1px 10px 1px;
@@ -97,6 +98,26 @@ Last satisfied css design will be seen in the screen
     margin-top: 40px;
     padding-left: 1%;
   }
+
+  .sticky {
+    padding: 0;
+    box-shadow: 0 1px 1px #e4e4e4;
+  }
+  .sticky .main-nav li {
+    padding: 2px 1px;
+  }
+  .sticky .main-nav li a {
+    padding: 0;
+    /* font-size: 50%; */
+  }
+
+  .logo-black {
+    height: 40px;
+    margin-top: 10px;
+    padding-left: 1%;
+    padding-bottom: 0;
+  }
+
   .long-copyright {
     width: 90%;
     margin-left: 5%;
@@ -146,11 +167,49 @@ Last satisfied css design will be seen in the screen
 /*screensizes 481 to 767px*/
 @media only screen and (max-width: 767px) {
   .main-nav {
+    float: left;
+    margin-top: 20px;
+    margin-left: 25%;
+    font-size: 90%;
     display: none;
   }
+  .sticky .main-nav {
+    font-size: 100%;
+  }
+  .main-nav li {
+    display: block;
+    border-bottom: 0;
+    padding: 4px 2px;
+  }
+  .main-nav li a:active,
+  .main-nav li a:hover,
+  .main-nav li a:link,
+  .main-nav li a:visited {
+    border-bottom: 0;
+  }
+  .sticky .main-nav {
+    margin-left: 40%;
+  }
+  .sticky .main-nav li a:active,
+  .sticky .main-nav li a:hover,
+  .sticky .main-nav li a:link,
+  .sticky .main-nav li a:visited {
+    border-bottom: 0;
+  }
+  .mobile-nav {
+    display: block;
+    float: right;
+  }
+  .mobile-nav-icon {
+    font-size: 250%;
+  }
+  .open {
+    display: inline-block;
+  }
+
   .logo {
     height: 120px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
   body {
     font-size: 16px;
@@ -250,7 +309,7 @@ Last satisfied css design will be seen in the screen
     padding-left: 5%;
   }
 
-  .work-step p{
+  .work-step p {
     font-size: 75%;
   }
   button {

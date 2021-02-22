@@ -121,7 +121,26 @@ section {
 .main-nav {
   float: right;
   margin-top: 50px;
-  list-style: none;
+}
+.mobile-nav {
+  display: none;
+  padding-right: 2%;
+}
+.mobile-nav-icon {
+  margin-top: 20px;
+  color: #fff;
+  padding: 0;
+  cursor: pointer;
+}
+.open,
+.close {
+  display: none;
+}
+
+.sticky .mobile-nav-icon {
+  margin-top: 15px;
+  color: #333;
+  font-size: 180%;
 }
 
 .main-nav li {
@@ -711,4 +730,22 @@ footer p {
 .navigation-links a:hover {
   border-bottom: 2px solid transparent;
   color: #e67e22;
+}
+
+/*****animation on scroll******/
+
+.js--animation-on-scroll-1,
+.js--animation-on-scroll-2,
+.js--animation-on-scroll-3 {
+  opacity: 0;
+  animation-duration: 1s;
+}
+.js--animation-on-scroll-4 {
+  animation-duration: 1s;
+}
+
+.js--animation-on-scroll-1 .animate__fadeIn,
+.js--animation-on-scroll-1 .animate__fadeInUp,
+.js--animation-on-scroll-3 .animate__fadeIn {
+  opacity: 1;
 }
