@@ -1,3 +1,6 @@
+console.log("************************************************************");
+
+console.log("this is coming from the 1JSBeginning.js file");
 console.log(
   "This is coming from a external javascript file imported into index.html"
 );
@@ -65,3 +68,11 @@ console.log(typeof manish); // type of the value is also undefined
 //null
 console.log("working with null");
 console.log(typeof null); //return object. this is a bug in javascript but it has not been fixed due to legacy reasons. Ideally it should return null similar to undefined
+console.log(null + 1); //gives 1
+console.log(1 + null); //gives 1
+console.log(null + null); //gives 0
+console.log(null - null); //gives 0
+console.log(null / null); //gives NaN
+console.log(null * null); //gives 0
+console.log(null + "manish"); //gives nullmanish
+console.log("manish" + null); //gives manishnull
